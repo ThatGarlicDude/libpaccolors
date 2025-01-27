@@ -1,6 +1,7 @@
 #ifndef COLOR_RESISTOR_SET_H
 #define COLOR_RESISTOR_SET_H
 
+	#include <stdio.h>
 	#include "colorResistor.h"
 
 	typedef struct {
@@ -10,4 +11,8 @@
 	} ColorResistorSet;
 
 	extern const ColorResistorSet defaultSet;
+
+	size_t getRedResistorSize(ColorResistorSet* rsp);
+	size_t getGreenResistorSize(ColorResistorSet* rsp);
+	size_t getBlueResistorSize(ColorResistorSet* rsp);
 #endif

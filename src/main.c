@@ -6,9 +6,10 @@
 #include "colorMath.h"
 
 int main() {
-	size_t redResistorSetSize = sizeof(defaultSet.redResistors) / sizeof(ColorResistor);
-	size_t greenResistorSetSize = sizeof(defaultSet.greenResistors) / sizeof(ColorResistor);
-	size_t blueResistorSetSize = sizeof(defaultSet.blueResistors) / sizeof(ColorResistor);
+	ColorResistorSet* rsp = &defaultSet;
+	size_t redResistorSetSize = getRedResistorSize(rsp);
+	size_t greenResistorSetSize = getGreenResistorSize(rsp);
+	size_t blueResistorSetSize = getBlueResistorSize(rsp);
 	printf("Size of the red resistors is: %zu\n", redResistorSetSize);
 	printf("Size of the green resistors is: %zu\n", greenResistorSetSize);
 	printf("Size of the blue resistors is: %zu\n", blueResistorSetSize);

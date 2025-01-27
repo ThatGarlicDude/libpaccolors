@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "colorResistor.h"
 
 /*
@@ -19,3 +20,18 @@ const ColorResistorSet defaultSet = {
 	220, 470, 1000,		// Green Resistors
 	220, 470		// Blue Resistors
 };
+
+// Gets the amount of red resistors in the ColorResistorSet.
+size_t getRedResistorSize(ColorResistorSet* rsp) {
+	return sizeof((*rsp).redResistors) / sizeof(ColorResistor);
+}
+
+// Gets the amount of green resistors in the ColorResistorSet.
+size_t getGreenResistorSize(ColorResistorSet* rsp) {
+	return sizeof((*rsp).greenResistors) / sizeof(ColorResistor);
+}
+
+// Gets the amount of blue resistors in the ColorResistorSet.
+size_t getBlueResistorSize(ColorResistorSet* rsp) {
+	return sizeof((*rsp).blueResistors) / sizeof(ColorResistor);
+}
