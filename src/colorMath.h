@@ -4,4 +4,5 @@
 	#include "colorResistor.h"
 	#include "colorResistorSet.h"
 
+	float percentageOfRedResistor(ColorResistor crp, ColorResistorSet* rsp);
 #endif

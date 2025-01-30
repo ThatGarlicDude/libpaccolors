@@ -7,11 +7,8 @@
 
 int main() {
 	ColorResistorSet* rsp = &defaultSet;
-	unsigned short redResistorsTotal = totalRedResistors(rsp);
-	unsigned short greenResistorsTotal = totalGreenResistors(rsp);
-	unsigned short blueResistorsTotal = totalBlueResistors(rsp);
-	printf("Total red resistors is: %u\n", redResistorsTotal);
-	printf("Total green resistors is: %u\n", greenResistorsTotal);
-	printf("Total blue resistors is: %u\n", blueResistorsTotal);
+	ColorResistor crp = defaultSet.redResistors[2];
+	float calc = percentageOfRedResistor(crp, rsp);
+	printf("Percentage of red resistor is: %f\n", calc);
 	return 0;
 }
