@@ -4,11 +4,14 @@
 #include "colorResistor.h"
 #include "colorResistorSet.h"
 #include "colorMath.h"
+#include "rgbTypeEnum.h"
 
 int main() {
-	ColorResistorSet* rsp = &defaultSet;
-	ColorResistor crp = defaultSet.redResistors[2];
-	float calc = percentageOfRedResistor(crp, rsp);
-	printf("Percentage of red resistor is: %f\n", calc);
+	RGB_TYPE red = RED;
+	RGB_TYPE green = GREEN;
+	RGB_TYPE blue = BLUE;
+	printf("Value of RED is: %d\n", red);
+	printf("Value of GREEN is: %d\n", green);
+	printf("Value of BLUE is: %d\n", blue);
 	return 0;
 }

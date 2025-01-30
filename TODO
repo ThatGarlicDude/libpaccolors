@@ -1,4 +1,7 @@
 TODO:
 
-	Get the total amount of resistors in an array.
-	Get the percentage of each resistor strength.
+	Try optimizing the code with the RGB_TYPE enum.
+	Put the default color resistor set into a separate file.
+	Finish turning the resistors into percentages.
+	Add the colorEncoder.c and .h files.
+	Convert the percentages into RGB values.
