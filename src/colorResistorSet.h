@@ -15,4 +15,9 @@
 	size_t getRedResistorSize(ColorResistorSet* rsp);
 	size_t getGreenResistorSize(ColorResistorSet* rsp);
 	size_t getBlueResistorSize(ColorResistorSet* rsp);
+
+	unsigned short totalRedResistors(ColorResistorSet* rsp);
+	unsigned short totalGreenResistors(ColorResistorSet* rsp);
+	unsigned short totalBlueResistors(ColorResistorSet* rsp);
+
 #endif

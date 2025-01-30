@@ -35,3 +35,33 @@ size_t getGreenResistorSize(ColorResistorSet* rsp) {
 size_t getBlueResistorSize(ColorResistorSet* rsp) {
 	return sizeof((*rsp).blueResistors) / sizeof(ColorResistor);
 }
+
+// Gets the total amount of red resistors in a ColorResistorSet.
+unsigned short totalRedResistors(ColorResistorSet* rsp) {
+	size_t redResistorSize = getRedResistorSize(rsp);
+	unsigned short totalResistors = 0;
+	for (int i = 0; i < redResistorSize; i++) {
+		totalResistors += (*rsp).redResistors[i];
+	}
+	return totalResistors;
+}
+
+// Gets the total amount of green resistors in a ColorResistorSet.
+unsigned short totalGreenResistors(ColorResistorSet* rsp) {
+	size_t greenResistorSize = getGreenResistorSize(rsp);
+        unsigned short totalResistors = 0;
+        for (int i = 0; i < greenResistorSize; i++) {
+                totalResistors += (*rsp).greenResistors[i];
+        }
+        return totalResistors;
+}
+
+// Gets the total amount of blue resistros in a ColorResistor Set.
+unsigned short totalBlueResistors(ColorResistorSet* rsp) {
+	size_t blueResistorSize = getBlueResistorSize(rsp);
+        unsigned short totalResistors = 0;
+        for (int i = 0; i < blueResistorSize; i++) {
+                totalResistors += (*rsp).blueResistors[i];
+        }
+        return totalResistors;
+}

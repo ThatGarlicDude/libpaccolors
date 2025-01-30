@@ -7,11 +7,11 @@
 
 int main() {
 	ColorResistorSet* rsp = &defaultSet;
-	size_t redResistorSetSize = getRedResistorSize(rsp);
-	size_t greenResistorSetSize = getGreenResistorSize(rsp);
-	size_t blueResistorSetSize = getBlueResistorSize(rsp);
-	printf("Size of the red resistors is: %zu\n", redResistorSetSize);
-	printf("Size of the green resistors is: %zu\n", greenResistorSetSize);
-	printf("Size of the blue resistors is: %zu\n", blueResistorSetSize);
+	unsigned short redResistorsTotal = totalRedResistors(rsp);
+	unsigned short greenResistorsTotal = totalGreenResistors(rsp);
+	unsigned short blueResistorsTotal = totalBlueResistors(rsp);
+	printf("Total red resistors is: %u\n", redResistorsTotal);
+	printf("Total green resistors is: %u\n", greenResistorsTotal);
+	printf("Total blue resistors is: %u\n", blueResistorsTotal);
 	return 0;
 }
