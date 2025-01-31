@@ -16,10 +16,15 @@ typedef struct {
 
 // The resistors used in the PCB.
 const ColorResistorSet defaultSet = {
-	220, 470, 1000,		// Red Resistors
-	220, 470, 1000,		// Green Resistors
-	220, 470		// Blue Resistors
+	1000, 470, 220,		// Red Resistors
+	1000, 470, 220,		// Green Resistors
+	470, 220		// Blue Resistors
 };
+
+// Gets the resistors used in the PCB.
+ColorResistorSet getDefaultColorResistorSet() {
+	return defaultSet;
+}
 
 // Gets the amount of red resistors in the ColorResistorSet.
 size_t getRedResistorSize(ColorResistorSet* rsp) {

@@ -7,11 +7,7 @@
 #include "rgbTypeEnum.h"
 
 int main() {
-	RGB_TYPE red = RED;
-	RGB_TYPE green = GREEN;
-	RGB_TYPE blue = BLUE;
-	printf("Value of RED is: %d\n", red);
-	printf("Value of GREEN is: %d\n", green);
-	printf("Value of BLUE is: %d\n", blue);
+	ColorResistorSet defaultSet = getDefaultColorResistorSet();
+	printf("Value of first red resistor is: %d\n", defaultSet.redResistors[0]);
 	return 0;
 }

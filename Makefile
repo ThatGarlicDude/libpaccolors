@@ -1,5 +1,5 @@
 # Name for the shared library
-LIBRARY := libpaccolors.so
+LIBRARY := libpaccolors
 
 # Compiler and flags
 CC := gcc
@@ -23,7 +23,7 @@ clean:
 	rm -rf $(OBJ_DIR) $(LIBRARY)
 
 $(LIBRARY): $(OBJ_FILES) | $(OBJ_DIR)
-	$(CC) -shared -o $@ $^
+	$(CC) -o $@ $^
 
 $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS)
