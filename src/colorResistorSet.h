@@ -10,8 +10,6 @@
 		ColorResistor blueResistors[2];
 	} ColorResistorSet;
 
-	extern const ColorResistorSet defaultSet;
-
     ColorResistorSet getDefaultColorResistorSet();
 
 	size_t getRedResistorSize(ColorResistorSet* rsp);
