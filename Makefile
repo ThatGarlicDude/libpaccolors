@@ -1,5 +1,9 @@
 # Name for the shared library
-LIBRARY := libpaccolors
+LIBRARY := libpaccolors.so
+
+# Destination
+DESTINATION := /usr/local/lib/
+FINAL_TARGET := $(DESTINATION)$(LIBRARY)
 
 # Compiler and flags
 CC := gcc
@@ -15,15 +19,20 @@ OBJ_FILES := $(SRC_FILES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 VPATH = $(SRC_DIR)
 .DEFAULT := all
-.PHONY: all clean
+.PHONY: all clean install uninstall
 
-all: $(LIBRARY)
+all: $(OBJ_FILES)
 
 clean:
-	rm -rf $(OBJ_DIR) $(LIBRARY)
+	rm -rf $(OBJ_DIR)
 
-$(LIBRARY): $(OBJ_FILES) | $(OBJ_DIR)
-	$(CC) -o $@ $^
+install: $(FINAL_TARGET)
+
+uninstall: $(FINAL_TARGET)
+	rm -f $(FINAL_TARGET)
+
+$(FINAL_TARGET): $(OBJ_FILES) | $(OBJ_DIR)
+	$(CC) -shared -o $@ $^
 
 $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS)

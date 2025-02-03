@@ -2,7 +2,8 @@ TODO:
 
 	Try optimizing the code with the RGB_TYPE enum.
 	Put the default color resistor set into a separate file.
-	Finish turning the resistors into percentages.
+	Finish turning the resistors into percentages. ✓
 	Add the colorDecoder.c and .h files. ✓
 		(Well, I am an idiot. Converting bytes to 8-bit RGB isn't encoding; it's decoding. Therefore, the file is now called colorDEcoder, not colorENcoder. I'll learn from this.)
-	Convert the percentages into RGB values.
+	Convert the percentages into RGB values. ✓
+	Do LOTS of cleaning.

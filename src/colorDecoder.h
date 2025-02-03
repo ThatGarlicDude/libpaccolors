@@ -3,7 +3,7 @@
 
 	#include <stdint.h>
 	#include "rgbColor.h"
-	#include "ColorResistorSet.h"
+	#include "colorResistorSet.h"
 
 	RGB decodeByte(uint_fast8_t byte, ColorResistorSet* rsp);
 
